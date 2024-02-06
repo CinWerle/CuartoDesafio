@@ -1,0 +1,66 @@
+
+
+### Test API esta encendido
+GET http://localhost:8080/ HTTP/1.1
+
+### Test API regreso de productos sin query
+
+GET http://localhost:8080/api/products HTTP/1.1
+
+### Test API regreso de productos con query
+
+GET http://localhost:8080/api/products?limit=5 HTTP/1.1
+
+### Test API regreso del ID
+
+GET http://localhost:8080/api/products/2 HTTP/1.1
+
+### Test API regreso del ID erroneo
+
+GET http://localhost:8080/api/products/34123123 HTTP/1.1
+
+
+### Test POST API 1
+
+POST  http://localhost:8080/api/products HTTP/1.1
+Content-Type: application/json
+
+  {
+    "title": "papita pal loro",
+    "description": "Descripción",
+    "code": "AS1",
+    "price": 50,
+    "stock": 40,
+    "category": "polo"
+  }
+
+
+### Test POST API 2
+
+POST  http://localhost:8080/api/product HTTP/1.1
+Content-Type: application/json
+
+  {
+    "title": "papita",
+    "description": "Descripción",
+    "code": "1CA",
+    "price": 20,
+    "stock": 30,
+    "category": "polo",
+    "status": false
+  }
+
+
+### Test PUT API Update
+
+PUT http://localhost:8080/api/products/2 HTTP/1.1
+Content-Type: application/json
+
+  {
+    "price": 3,
+    "status": false
+  }
+
+### Test PUT API Delete
+
+DELETE  http://localhost:8080/api/products/2 HTTP/1.1

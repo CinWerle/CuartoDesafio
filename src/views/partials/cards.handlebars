@@ -1,0 +1,16 @@
+{{#each products}}
+
+  <div class="card m-5" style="width: 18rem;">
+    <img src="..." class="card-img-top" alt="..." />
+    <div class="card-body">
+      <h5 class="card-title text-center">{{this.title}}</h5>
+      <p class="card-text fw-bold">Descripción: {{this.description}}</p>
+      <span class="card-text text-danger">Precio: {{this.price}}</p>
+      <div class="btn-grou text-center" role="group" aria-label="Basic outlined example">
+        <button type="button" class="btn btn-success">Comprar</button>
+        <button type="button" class="btn btn-danger">Eliminar</button>
+      </div>
+    </div>
+  </div>
+
+{{/each}}
